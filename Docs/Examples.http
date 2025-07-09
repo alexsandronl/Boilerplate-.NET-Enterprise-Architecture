@@ -1,0 +1,68 @@
+### Exemplo: Autenticação (Login)
+
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123"
+}
+
+### Exemplo: Criar Pedido (Order)
+
+POST http://localhost:5000/api/orders
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "customerId": "{{customer_id}}"
+}
+
+### Exemplo: Buscar Pedido por ID
+
+GET http://localhost:5000/api/orders/{{order_id}}
+Authorization: Bearer {{jwt_token}}
+
+### Exemplo: Health Check
+
+GET http://localhost:5000/health
+
+### Exemplo: Mensagem Localizada (pt-BR)
+
+GET http://localhost:5000/api/localizationdemo/hello
+Accept-Language: pt-BR
+
+### Exemplo: Mensagem Localizada (en-US)
+
+GET http://localhost:5000/api/localizationdemo/hello
+Accept-Language: en-US
+
+### Exemplo: Publicar Evento no RabbitMQ
+
+POST http://localhost:5000/api/servicebus/publish
+Content-Type: application/json
+
+{
+  "queue": "order-events",
+  "message": "{ \"orderId\": \"{{order_id}}\", \"event\": \"OrderCreated\" }"
+}
+
+### Exemplo: Enviar E-mail
+
+POST http://localhost:5000/api/email/send
+Content-Type: application/json
+
+{
+  "to": "destinatario@exemplo.com",
+  "subject": "Bem-vindo!",
+  "body": "Sua conta foi criada com sucesso."
+}
+
+### Exemplo: Requisição Resiliente (Polly)
+
+GET http://localhost:5000/api/pollydemo/get?url=https://httpstat.us/503
+
+---
+
+> Substitua `{{jwt_token}}`, `{{customer_id}}`, `{{order_id}}` pelos valores reais obtidos nas respostas das requisições anteriores.
+> Use ferramentas como [VSCode REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) ou [Insomnia](https://insomnia.rest/) para testar facilmente. 
