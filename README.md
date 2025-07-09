@@ -1,6 +1,6 @@
 # Boilerplate .NET Enterprise Architecture
 
-[![Build Status](https://github.com/alexsandronl/Boilerplate-.NET-Enterprise-Architecture/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/SEU_USUARIO/Boilerplate-.NET-Enterprise-Architecture/actions)
+[![Build Status](https://github.com/alexsandronl/Boilerplate-.NET-Enterprise-Architecture/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/alexsandronl/Boilerplate-.NET-Enterprise-Architecture/actions)
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue)](https://dotnet.microsoft.com/)
 [![Docker](https://img.shields.io/badge/docker-ready-blue)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
